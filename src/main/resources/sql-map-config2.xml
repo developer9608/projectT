@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC 
+  "-//mybatis.org//DTD Config 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+<configuration>
+ <typeAliases>
+  <typeAlias alias="korea" type="com.korea.k1.board.koreaVO" />
+  <typeAlias alias="grade" type="com.korea.k1.board.gradeVO" />
+  <typeAlias alias="company" type="com.korea.k1.company.CompanyVO" />
+  <typeAlias alias="ev" type="com.korea.k1.company.EvSearchVO" />
+  <typeAlias alias="pd" type="com.korea.k1.product.ProductVO" />
+  <typeAlias alias="cart" type="com.korea.k1.cart.CartVO" />
+ </typeAliases>
+ 
+ <mappers>
+  <mapper resource="mappings/korea-mapping.xml"/>
+  <mapper resource="mappings/company-mapping.xml"/>
+  <mapper resource="mappings/product-mapping.xml"/>
+  <mapper resource="mappings/cart-mapping.xml"/>
+ </mappers>
+</configuration>

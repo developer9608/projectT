@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+a:link {
+  color : #ffffff;
+}
+a:visited {
+  color : #ffffff;;
+}
+a:hover {
+  color : #ffffff;;
+}
+a:active {
+  color : #ffffff;
+}
+header{
+	background-color:blue;
+	height:75px;
+	line-height:75px;
+	text-align:center;
+	font-size:30px;
+	color:#ffffff;	
+}
+
+nav{
+	background-color:#9370db ;
+	height:30px;
+	line-height:30px;
+	text-align:left;
+	font-size:16px;
+	color:#ffffff;	
+}
+
+section{
+	background-color:#c0c0c0  ;
+	text-align:left;
+	min-height:600px;	
+}
+
+footer{
+	background-color:#0044ff;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+	font-size:15px;
+	color:#ffffff;	
+}
+tr{
+	height:50px;
+}
+#td1{
+	color:#ffffff;	
+	border: 1px solid black; 
+    border-color: black; /* 테두리 색상 */
+}
+
+#a1{
+	font-size:15px;
+	text-align:center;
+	width:40%;
+}

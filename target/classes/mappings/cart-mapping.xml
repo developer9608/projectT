@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="cartDAO">
+
+	
+ <insert id="INSERT" parameterType="cart" >
+   insert into tbl_cart2(cartId, custNo, productId, amount) 
+   values(seq_tbl_cart2.nextval, #{custNo}, #{productId}, #{amount})
+ </insert>
+ 
+ <select id="SELECTALL" resultType="cart" >
+    select cartId, c.productId, productName,
+ 	productPrice, amount, productImg as productImgStr
+ 	from tbl_cart2 c join tbl_product2 p
+ 	on c.productId = p.productId where custNo=#{custNo}
+ 	order by cartId
+ </select>
+</mapper>

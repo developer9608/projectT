@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="ProductDAO">
+	<resultMap type="pd" id="pdResult">
+		<id property="productId" column="productId"/>
+		<result property="productName" column="productName"/>
+		<result property="productPrice" column="productPrice"/>
+		<result property="productDesc" column="productDesc"/>
+		<result property="productImgStr" column="productImg"/>
+		<result property="productDate" column="productDate"/>
+	</resultMap>
+	
+ <insert id="pdINSERT" parameterType="pd" >
+   insert into tbl_product2(productId,productName,productPrice,productDesc,productImg) 
+   values(seq_product2.nextval, #{productName}, #{productPrice}, #{productDesc}, #{productImgStr})
+ </insert>
+ 
+ <select id="pdSELECTALL" resultType="pd" resultMap="pdResult">
+ 	select * from tbl_product2 order by productId desc
+ </select>
+ 
+ <select id="pdSELECTONE" resultType="pd" resultMap="pdResult">
+ 	select * from tbl_product2 where productId=#{productId}
+ </select>
+ 
+ <delete id ="pdDELETE" parameterType="pd">
+ 	delete from tbl_product2 where productId=#{productId}
+ </delete>
+</mapper>
